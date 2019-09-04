@@ -3,6 +3,7 @@
 * Plugin Name: _DP Ocean by uptimizt
 * Description: Display posts for OceanWP
 * Author: uptimizt
+* GitHub Plugin URI: uptimizt/dp-ocean-u7
 * Version: 0.2
 */
 
