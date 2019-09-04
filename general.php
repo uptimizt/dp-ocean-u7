@@ -1,10 +1,10 @@
 <?php
 /*
-* Plugin Name: _DP Ocean by uptimizt
-* Description: Display posts for OceanWP
+* Plugin Name: DP Ocean by uptimizt
+* Description: Display posts for OceanWP by uptimizt [dp]
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.3
+* Version: 0.4
 */
 
 namespace uptimizt\DPOcean;
@@ -19,6 +19,14 @@ class General {
 
     add_filter( 'display_posts_shortcode_output', [__CLASS__, 'filter_output'], 10, 11 );
 
+    add_action( 'wp_enqueue_scripts', [__CLASS__, 'assets'] );
+
+
+  }
+
+  // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
+  public static function assets() {
+  	wp_enqueue_style( 'DPOcean', plugins_url('style.css', __FILE__) );
   }
 
   /**
@@ -50,8 +58,11 @@ class General {
           'tmpl' => 'list-post.php',
       ];
 
+
       $atts = shortcode_atts( $atts_default, $atts_source );
       $atts = array_merge($atts, $atts_source);
+
+      $atts['wrapper_class'] .= ' ' . $atts['tmpl'];
 
       if(!empty($atts)){
           foreach ($atts as $key => $value) {
