@@ -4,7 +4,7 @@
 * Description: Display posts for OceanWP
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.2
+* Version: 0.3
 */
 
 namespace uptimizt\DPOcean;
