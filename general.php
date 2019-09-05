@@ -4,7 +4,7 @@
 * Description: Display posts for OceanWP by uptimizt [dp]
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.4
+* Version: 0.5
 */
 
 namespace uptimizt\DPOcean;
@@ -71,6 +71,7 @@ class General {
           $shortcode = sprintf('[display-posts %s]', $args_for_dp);
       }
       $html = $atts['html_before'] . do_shortcode($shortcode) . $atts['html_after'];
+
       return $html;
   }
 
