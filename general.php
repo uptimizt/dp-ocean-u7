@@ -2,9 +2,10 @@
 /*
 * Plugin Name: DP Ocean by uptimizt
 * Description: Display posts for OceanWP by uptimizt [dp]
+* Plugin URI: https://github.com/uptimizt/dp-ocean-u7
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.5
+* Version: 0.6
 */
 
 namespace uptimizt\DPOcean;
