@@ -5,7 +5,7 @@
 * Plugin URI: https://github.com/uptimizt/dp-ocean-u7
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.6
+* Version: 0.7
 */
 
 namespace uptimizt\DPOcean;
@@ -27,7 +27,12 @@ class General {
 
   // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
   public static function assets() {
-  	wp_enqueue_style( 'DPOcean', plugins_url('style.css', __FILE__) );
+  	wp_enqueue_style( 
+      'DPOcean', 
+      plugins_url('style.css', __FILE__),
+      [],
+      filemtime(plugin_dir_path( __FILE__ ) . 'style.css')
+    );
   }
 
   /**
