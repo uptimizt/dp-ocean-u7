@@ -5,7 +5,7 @@
 * Plugin URI: https://github.com/uptimizt/dp-ocean-u7
 * Author: uptimizt
 * GitHub Plugin URI: uptimizt/dp-ocean-u7
-* Version: 0.7
+* Version: 0.8
 */
 
 namespace uptimizt\DPOcean;

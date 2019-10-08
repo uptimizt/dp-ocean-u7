@@ -1,57 +1,89 @@
 .rating-tablephp {
-    
     .rating-entry-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
 
-        padding: 11px;
+        padding: 0px 15px;
+        padding-top: 10px;
         background-color: white;
         border: white 1px;
         box-shadow: 0 3px 9px #0000001f;
-        margin: 5px 0px;
+        margin: 15px 0;
+    }
 
 
-        .item-meta-wrapper{
-            flex-basis: 80%;
+    .item-entry-title {
+        margin-bottom: 5px;
+    }
+
+    .wp-block-button__link {
+        width: 100%;
+    }
+
+    .attachment-woocommerce_thumbnail {
+        width: 100%;
+    }
+
+    .item-actions{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .rating-entry-row {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: start;
+            justify-content: space-between;
+            align-items: center;
 
-            .item-img{
-                max-width: 300px;
-                flex-basis: 20%;
-            }
 
-            .item-meta{
+            .item-meta-wrapper{
                 flex-basis: 80%;
-                padding: 11px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: start;
 
-                .rating-block {
-                    display: inline-flex;
-                    align-items: center;
+                .item-img{
+                    //max-width: 300px;
+                    flex-basis: 20%;
                 }
 
-                .rating-avg{
-                    margin-right: 5px;
+                .item-meta{
+                    flex-basis: 80%;
+                    padding: 0px 15px;
+
+                    .rating-block {
+                        display: inline-flex;
+                        align-items: center;
+                    }
+
+                    .rating-avg{
+                        margin-right: 5px;
+                    }
                 }
             }
-        }
-        
-        .item-actions{
-            flex-basis: 20%;
-            // display: flex;
-            // flex-direction: row;
-            // flex-wrap: nowrap;
-            // justify-content: space-between;
 
-            .wp-block-button{
-                padding: 5px;
+            .dp-rating-block--count {
+                margin-left: 5px;
+                margin-right: 5px;
             }
-        }
 
+            .item-actions{
+                flex-basis: 20%;
+
+                .wp-block-button{
+                    padding: 5px;
+                }
+            }
+
+        }
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .rating-entry-row, .item-meta-wrapper {
+            //display: block;
+        }
     }
 }
