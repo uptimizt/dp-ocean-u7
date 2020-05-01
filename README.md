@@ -4,6 +4,10 @@ Display Posts for OceanWP (theme for WordPress)
 
 # examples
 
+## 
+
+[lop-square posts_per_page="5"]
+
 
 ## список постов - посты - по тегу
 

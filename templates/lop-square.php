@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
 $post = get_post();
 $classes = 'nicePostList__card nicePostList__item_id_' . $post->ID;
 
+$meta_text = apply_filters( 'lp_square_meta_text', '',  $post);
 // $img_sizes = get_intermediate_image_sizes();
 ?>
 
@@ -27,7 +28,7 @@ $classes = 'nicePostList__card nicePostList__item_id_' . $post->ID;
             <div class="nicePostList__cardImgOverlay"></div>
             <div class="nicePostList__cardTitle">
                 <div class="nicePostList__postMeta">
-                    <span>Статьи</span>
+                    <span><?= $meta_text ?></span>
                 </div>
                 <h2 class="nicePostList__cardTitleText">
                     <span><?php the_title(); ?></span>
@@ -38,5 +39,3 @@ $classes = 'nicePostList__card nicePostList__item_id_' . $post->ID;
 </div>
 
 
-
-</article><!-- #post-## -->
