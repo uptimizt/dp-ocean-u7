@@ -29,9 +29,9 @@ class General {
   public static function assets() {
   	wp_enqueue_style( 
       'DPOcean', 
-      plugins_url('style.css', __FILE__),
+      plugins_url('docs/base.css', __FILE__),
       [],
-      filemtime(plugin_dir_path( __FILE__ ) . 'style.css')
+      filemtime(plugin_dir_path( __FILE__ ) . 'docs/base.css')
     );
   }
 
