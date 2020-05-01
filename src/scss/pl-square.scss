@@ -1,0 +1,109 @@
+
+.nicePostList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media (min-width: 768px) {
+  
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        // display: inline-block;
+        height: 340px;
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        background-color: #fafafa;
+        border-radius: 8px;
+        margin: 12px;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+  
+            width: 100%;
+            min-width: 330px;
+        }
+    }
+
+    &__postMeta {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__cardTitle {
+        position: absolute;
+        color: #fff;
+        right: 26px;
+        bottom: 26px;
+        left: 26px;
+
+    }
+
+    &__cardTitleText {
+        font-size: 18px;
+        letter-spacing: -0.2px;
+        color: #fff;
+        line-height: 22px;
+        text-shadow: -3px 3px 9px rgba(0, 0, 0, 0.85);
+    }
+
+    &__postUrl {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__cardWrapper {
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            background-color: #fff;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+
+    &__cardImg {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        transition: all 0.2s ease-in;
+    }
+
+    figure {
+        // max-width: 1160px !important;
+        width: 100%;
+        // margin: 0 auto 48px !important;
+    }
+
+    &__cardImgOverlay {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    
+}
