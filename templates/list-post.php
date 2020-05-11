@@ -10,6 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$is_singular_start = $GLOBALS['wp_query']->is_singular;
+
+$GLOBALS['wp_query']->is_singular = false;
+$GLOBALS['wp_query']->is_single = false;
+
+
 // Get post format
 $format = get_post_format();
 // Add classes to the blog entry post class
@@ -79,3 +85,9 @@ $inner_classes = implode( ' ', $inner_classes ); ?>
 	</div><!-- .blog-entry-inner -->
 
 </article><!-- #post-## -->
+<?php 
+
+$GLOBALS['wp_query']->is_singular = $is_singular_start;
+$GLOBALS['wp_query']->is_single = $is_singular_start;
+
+
